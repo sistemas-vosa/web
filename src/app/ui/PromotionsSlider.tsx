@@ -1,44 +1,38 @@
 'use client'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules'
+import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
-import 'swiper/css/pagination'
+import 'swiper/css/autoplay'
+import Image from "next/image";
 
-interface Promotion {
-    title: string
-    description: string
-}
-
-const promotions: Promotion[] = [
-    {
-        title: '20% de descuento en pasajes a Tucumán',
-        description: 'Válido hasta el 30 de junio.',
-    },
-    {
-        title: 'Nuevo servicio Suite 8x2',
-        description: 'Máximo confort en tu viaje.',
-    },
+const images: string[] = [
+    '/img/01.png',
+    '/img/02.png',
+    // Podés agregar más imágenes si querés
 ]
 
 export default function PromotionsSlider() {
     return (
-        <div className="bg-white/80 text-gray-800 rounded-lg shadow-lg overflow-hidden">
+        <div className="w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-lg">
             <Swiper
-                modules={[Pagination]}
-                pagination={{ clickable: true }}
+                modules={[Autoplay]}
                 spaceBetween={30}
                 slidesPerView={1}
                 loop={true}
-                autoplay={true}
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false
+                }}
             >
-                {promotions.map((promo, index) => (
+                {images.map((image, index) => (
                     <SwiperSlide key={index}>
-                        <div className="p-4">
-                            <p className="text-sm uppercase text-orange-500 mb-2">Promoción</p>
-                            <h3 className="text-lg font-semibold mb-1">{promo.title}</h3>
-                            <p className="text-sm">{promo.description}</p>
-                        </div>
+                        <Image
+                            src={image}
+                            width={800}
+                            height={400}
+                            alt={`Promoción ${index + 1}`}
+                            className="w-full h-full object-cover" />
                     </SwiperSlide>
                 ))}
             </Swiper>
