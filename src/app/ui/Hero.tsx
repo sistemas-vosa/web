@@ -16,7 +16,7 @@ export default function Hero() {
 
         const parallax = gsap.to(bgRef.current, {
             y: 50,
-            scale: 1.05,
+            scale: 2,
             ease: 'none',
             scrollTrigger: {
                 trigger: containerRef.current,
@@ -43,7 +43,7 @@ export default function Hero() {
 
             <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-12 flex flex-col md:flex-row items-center md:items-start gap-12">
                 {/* Columna Izquierda - Formulario */}
-                <div className="w-full md:w-1/2 bg-white/90 p-6 rounded-lg shadow-lg text-gray-800">
+                <div className="w-full md:w-1/2 bg-white/90 p-7 rounded-lg shadow-lg text-gray-800">
                     <h1 className="text-2xl md:text-4xl font-bold mb-4">¿A dónde querés viajar?</h1>
                     <form className="flex flex-col gap-4 mb-4">
                         <input type="text" placeholder="Origen" className="p-3 rounded border border-gray-300" />
