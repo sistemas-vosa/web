@@ -68,7 +68,7 @@ export default function Hero() {
                     ref={titleRef}
                     className="text-3xl md:text-5xl font-bold leading-tight"
                 >
-                    Conectamos destinos, transportamos experiencias
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </h1>
                 <p
                     ref={subtitleRef}
