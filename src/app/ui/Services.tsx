@@ -66,7 +66,9 @@ export default function Services() {
             {services.map((service, index) => (
                 <div
                     key={index}
-                    ref={(el) => (serviceRefs.current[index] = el)}
+                    ref={(el) => {
+                        serviceRefs.current[index] = el
+                    }}
                     className={`flex flex-col md:flex-row ${
                         index % 2 !== 0 ? 'md:flex-row-reverse' : ''
                     } items-center gap-8`}

@@ -15,25 +15,28 @@ export default function WhyVosa() {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            gsap.fromTo(
-                sectionRef.current?.querySelectorAll('div > div'),
-                { opacity: 0, y: 40 },
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 1,
-                    stagger: 0.2,
-                    ease: 'power3.out',
-                    scrollTrigger: {
-                        trigger: sectionRef.current,
-                        start: 'top 85%',
-                    },
-                }
-            )
-        }, sectionRef)
+            const elements = sectionRef.current?.querySelectorAll('div > div');
+            if (elements && elements.length > 0) {
+                gsap.fromTo(
+                    elements,
+                    { opacity: 0, y: 40 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1,
+                        stagger: 0.2,
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: sectionRef.current,
+                            start: 'top 85%',
+                        },
+                    }
+                );
+            }
+        }, sectionRef);
 
-        return () => ctx.revert()
-    }, [])
+        return () => ctx.revert();
+    }, []);
 
     return (
         <section ref={sectionRef} className="bg-white py-20">

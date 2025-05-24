@@ -11,25 +11,28 @@ export default function Testimonials() {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            gsap.fromTo(
-                sectionRef.current?.querySelectorAll('blockquote'),
-                { opacity: 0, y: 40 },
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 1,
-                    stagger: 0.3,
-                    ease: 'power2.out',
-                    scrollTrigger: {
-                        trigger: sectionRef.current,
-                        start: 'top 85%',
-                    },
-                }
-            )
-        }, sectionRef)
+            const blockquotes = sectionRef.current?.querySelectorAll('blockquote');
+            if (blockquotes) {
+                gsap.fromTo(
+                    blockquotes,
+                    { opacity: 0, y: 40 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1,
+                        stagger: 0.3,
+                        ease: 'power2.out',
+                        scrollTrigger: {
+                            trigger: sectionRef.current,
+                            start: 'top 85%',
+                        },
+                    }
+                );
+            }
+        }, sectionRef);
 
-        return () => ctx.revert()
-    }, [])
+        return () => ctx.revert();
+    }, []);
 
     return (
         <section ref={sectionRef} className="bg-gray-50 py-20">
