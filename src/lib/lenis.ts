@@ -11,7 +11,7 @@ export const initLenis = () => {
         // smoothTouch: false, // Eliminado porque no existe en LenisOptions
         touchMultiplier: 2,
         infinite: false,
-        Lerp: 0.1,
+        lerp: 0.1
     })
 
     // Si no usas los parámetros, omítelos
