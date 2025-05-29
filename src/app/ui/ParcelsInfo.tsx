@@ -45,7 +45,7 @@ export default function ParcelsInfo() {
                         alt="Servicio de Encomiendas"
                         width={500}
                         height={350}
-                        className="rounded-lg shadow-lg w-full object-cover"
+                        className="rounded-lg shadow-lg object-cover w-full h-auto"
                     />
                 </div>
 
