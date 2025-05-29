@@ -197,7 +197,7 @@ export default function Testimonials() {
                                     </div>
 
                                     {/* Comment */}
-                                    <p className="text-gray-700 leading-relaxed mb-6 italic">"{testimonial.comment}"</p>
+                                    <p className="text-gray-700 leading-relaxed mb-6 italic">&quot;{testimonial.comment}&quot;</p>
 
                                     {/* User Info */}
                                     <div className="flex items-center gap-4">

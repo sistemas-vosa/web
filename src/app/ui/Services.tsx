@@ -94,7 +94,6 @@ const services = [
 
 export default function Services() {
     const serviceRefs = useRef<(HTMLDivElement | null)[]>([])
-    const [activeService, setActiveService] = useState(0)
 
     useEffect(() => {
         const ctx = gsap.context(() => {
