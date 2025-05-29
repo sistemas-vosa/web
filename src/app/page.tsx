@@ -1,15 +1,17 @@
-'use client'
+"use client"
 
-import { useEffect } from 'react'
-import { initLenis } from '@/lib/lenis'
+import { useEffect } from "react"
+import { initLenis } from "@/lib/lenis"
 
-import Hero from '@/app/ui/Hero'
-import CompanyInfo from '@/app/ui/CompanyInfo'
-import Services from '@/app/ui/Services'
-import ParcelsInfo from '@/app/ui/ParcelsInfo'
-import Stats from '@/app/ui/Stats'
-import WhyVosa from '@/app/ui/WhyVosa'
-import Testimonials from '@/app/ui/Testimonials'
+import Hero from "@/app/ui/Hero"
+import CompanyInfo from "@/app/ui/CompanyInfo"
+import Services from "@/app/ui/Services"
+import ParcelsInfo from "@/app/ui/ParcelsInfo"
+import Stats from "@/app/ui/Stats"
+import WhyVosa from "@/app/ui/WhyVosa"
+import Testimonials from "@/app/ui/Testimonials"
+import Contact from "@/app/ui/Contact"
+import Footer from "@/app/ui/Footer"
 
 export default function Home() {
     useEffect(() => {
@@ -25,6 +27,8 @@ export default function Home() {
             <Services />
             <ParcelsInfo />
             <Testimonials />
+            <Contact />
+            <Footer />
         </main>
     )
 }
