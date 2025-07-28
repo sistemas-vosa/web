@@ -168,7 +168,13 @@ export default function Stats() {
                     <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
                         <h3 className="text-2xl font-bold text-gray-800 mb-4">¿Listo para ser parte de estas estadísticas?</h3>
                         <p className="text-gray-600 mb-6">Únete a miles de pasajeros que confían en nosotros para sus viajes</p>
-                        <button className="bg-orange-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-700 transition-colors">
+                        <button
+                            onClick={() => {
+                                const hero = document.getElementById("hero");
+                                if (hero) hero.scrollIntoView({ behavior: "smooth" });
+                            }}
+                            className="bg-orange-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-700 transition-colors"
+                        >
                             Reservar Ahora
                         </button>
                     </div>

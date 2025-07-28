@@ -41,7 +41,7 @@ export default function Header() {
                     </div>
                     <div className="flex items-center gap-2">
                         <Clock size={14} />
-                        <span>Atención 24hs</span>
+                        <span>Atención personalizada</span>
                     </div>
                 </div>
             </div>

@@ -15,8 +15,7 @@ const services = [
         subtitle: "La experiencia de lujo definitiva",
         description:
             "Nuestro servicio más exclusivo con butacas que se reclinan 180°, catering gourmet, bebidas premium, mantas de alta calidad, almohadas ergonómicas y atención personalizada las 24 horas.",
-        image: "/img/services/service-suite.jpg",
-        price: "Desde $15.000",
+        image: "/img/services/service-suite.png",
         rating: 4.9,
         features: [
             "Butacas reclinables 180°",
@@ -42,8 +41,7 @@ const services = [
         subtitle: "Confort y calidad en cada kilómetro",
         description:
             "Butacas reclinables hasta 160°, comidas calientes a bordo, bebidas incluidas, climatización personalizada, mantas suaves y almohadas cómodas. Conectamos Buenos Aires con las principales ciudades del norte.",
-        image: "/img/services/service-cama.jpg",
-        price: "Desde $8.500",
+        image: "/img/services/service-cama.png",
         rating: 4.7,
         features: [
             "Butacas reclinables 160°",
@@ -69,8 +67,7 @@ const services = [
         subtitle: "La opción inteligente para viajar",
         description:
             "Una alternativa accesible sin comprometer la comodidad. Butacas reclinables 145°, aire acondicionado, sistema de entretenimiento con música y TV, y nuestra amplia red de destinos en todo el país.",
-        image: "/img/services/service-semicama.jpg",
-        price: "Desde $4.200",
+        image: "/img/services/service-semicama.png",
         rating: 4.5,
         features: [
             "Butacas reclinables 145°",
@@ -158,10 +155,11 @@ export default function Services() {
                                         height={400}
                                         className="rounded-2xl shadow-2xl w-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                                     />
-                                    {/* Price overlay */}
+                                    {/* Price overlay
                                     <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
                                         <span className="font-bold text-gray-800">{service.price}</span>
                                     </div>
+                                    */}
                                     {/* Rating overlay */}
                                     <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg flex items-center gap-2">
                                         <Star className="text-yellow-500 fill-current" size={16} />
@@ -215,14 +213,20 @@ export default function Services() {
                                 {/* CTA */}
                                 <div className="flex flex-col sm:flex-row gap-4">
                                     <button
+                                        onClick={() => {
+                                            const hero = document.getElementById("hero");
+                                            if (hero) hero.scrollIntoView({ behavior: "smooth" });
+                                        }}
                                         className={`bg-gradient-to-r ${service.color} text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2`}
                                     >
                                         Reservar {service.title}
                                         <ArrowRight size={20} />
                                     </button>
+                                    {/*
                                     <button className="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-full font-semibold hover:border-gray-400 transition-colors">
                                         Ver horarios
                                     </button>
+                                    */}
                                 </div>
                             </div>
                         </div>
@@ -230,6 +234,7 @@ export default function Services() {
                 </div>
 
                 {/* Comparison Table */}
+                {/*
                 <div className="mt-32">
                     <h3 className="text-3xl font-bold text-center text-gray-800 mb-12">Compará nuestros servicios</h3>
                     <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -283,6 +288,7 @@ export default function Services() {
                         </div>
                     </div>
                 </div>
+                */}
             </div>
         </section>
     )
