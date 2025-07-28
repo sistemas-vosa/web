@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Star, Shield, Clock } from "lucide-react"
@@ -16,6 +16,8 @@ export default function Hero() {
     const formRef = useRef<HTMLDivElement>(null)
     const backgroundRef = useRef<HTMLDivElement>(null)
     const featuresRef = useRef<HTMLDivElement>(null)
+    const [iframeLoaded, setIframeLoaded] = useState(false)
+    const [iframeError, setIframeError] = useState(false)
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -108,24 +110,24 @@ export default function Hero() {
                         {/* Iframe a la izquierda en desktop, arriba en mobile */}
                         <div
                             ref={formRef}
-                            className="flex-1 flex flex-col items-center justify-center mb-8 md:mb-0"
+                            className="w-full md:w-[370px] flex-shrink-0 flex flex-col items-center"
                         >
-                            <div className="bg-white/95 backdrop-blur-sm text-gray-800 rounded-2xl shadow-2xl p-6 md:p-8 w-full max-w-xs md:max-w-sm lg:max-w-md flex flex-col items-center border border-gray-200">
-                                <h3 className="text-xl md:text-2xl font-bold text-center mb-6 text-gray-800">
-                                    Comprá tu pasaje online
-                                </h3>
-                                <div className="flex justify-center w-full">
-                                    <iframe
-                                        src="https://ecommerce.centraldepasajes.com.ar/agenciaframe.aspx?Token=C22TQeAa5%2BQ%2BOA6kFwavSXDleWuYm6XQjH9s3%2F3J%2BNI%3D&age=vos"
-                                        style={{ border: 'none', width: '100%', maxWidth: 330, height: 494, overflow: 'hidden', borderRadius: 16, background: '#fff', boxShadow: '0 4px 24px 0 rgba(0,0,0,0.10)' }}
-                                        className="shadow-lg transition-all duration-300 hover:shadow-2xl focus:shadow-2xl"
-                                        title="Buscador de pasajes"
-                                        allowFullScreen={false}
-                                    />
-                                </div>
-                                <p className="text-center text-sm text-gray-600 mt-4">
-                                    💡 <strong>Tip:</strong> Reservá con anticipación y obtené los mejores precios
-                                </p>
+                            <div className="relative w-full flex justify-center items-center" style={{ minHeight: 494 }}>
+                                {!iframeLoaded && !iframeError && (
+                                    <div style={{ minHeight: 494 }} />
+                                )}
+                                {iframeError && (
+                                    <div className="absolute inset-0 flex items-center justify-center bg-red-100 rounded-2xl shadow-2xl z-10">
+                                        <span className="text-red-700 font-semibold text-lg">No se pudo cargar el buscador. Intente más tarde.</span>
+                                    </div>
+                                )}
+                                <iframe
+                                    src="https://ecommerce.centraldepasajes.com.ar/agenciaframe.aspx?Token=C22TQeAa5%2BQ%2BOA6kFwavSXDleWuYm6XQjH9s3%2F3J%2BNI%3D&age=vos"
+                                    style={{ border: 'none', width: '100%', maxWidth: 350, height: 494, overflow: 'hidden', borderRadius: 12, background: '#fff', display: iframeLoaded && !iframeError ? 'block' : 'none', margin: '0 auto' }}
+                                    title="Buscador de pasajes"
+                                    onLoad={() => setIframeLoaded(true)}
+                                    onError={() => setIframeError(true)}
+                                />
                             </div>
                         </div>
                     </div>
