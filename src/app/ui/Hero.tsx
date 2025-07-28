@@ -2,11 +2,10 @@
 
 import type React from "react"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { Search, MapPin, Calendar, ArrowRight, Star, Shield, Clock } from "lucide-react"
-import PromotionsSlider from "@/app/ui/PromotionsSlider"
+import { Star, Shield, Clock } from "lucide-react"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -17,12 +16,6 @@ export default function Hero() {
     const formRef = useRef<HTMLDivElement>(null)
     const backgroundRef = useRef<HTMLDivElement>(null)
     const featuresRef = useRef<HTMLDivElement>(null)
-
-    const [formData, setFormData] = useState({
-        origen: "",
-        destino: "",
-        fecha: "",
-    })
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -68,12 +61,6 @@ export default function Hero() {
 
         return () => ctx.revert()
     }, [])
-
-    const handleSearch = (e: React.FormEvent) => {
-        e.preventDefault()
-        // Aquí iría la lógica de búsqueda
-        console.log("Búsqueda:", formData)
-    }
 
     return (
         <section

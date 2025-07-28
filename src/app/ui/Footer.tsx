@@ -1,6 +1,6 @@
 "use client"
 
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube } from "lucide-react"
+import { Phone, Mail, MapPin } from "lucide-react"
 import Image from "next/image"
 
 export default function Footer() {
@@ -150,11 +150,12 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Bottom Footer
+            {/* Bottom Footer */}
             <div className="border-t border-gray-800">
                 <div className="max-w-7xl mx-auto px-4 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <div className="text-gray-400 text-sm">© {currentYear} Vosa. Todos los derechos reservados.</div>
+                        {/*
                         <div className="flex gap-6 text-sm">
                             <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
                                 Términos y Condiciones
@@ -166,10 +167,10 @@ export default function Footer() {
                                 Política de Cookies
                             </a>
                         </div>
+                         */}
                     </div>
                 </div>
             </div>
-            */}
         </footer>
     )
 }
