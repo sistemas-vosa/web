@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Phone, Menu, X, Clock, Mail } from "lucide-react"
+import Link from "next/link";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -57,7 +58,9 @@ export default function Header() {
                 <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
                     {/* Logo */}
                     <div className="flex items-center">
-                        <Image src="/img/logo.png" alt="Vosa Logo" width={120} height={120} className="w-auto h-12 md:h-16" />
+                        <Link href="/">
+                            <Image src="/img/logo.png" alt="Vosa Logo" width={120} height={120} className="w-auto h-12 md:h-16" />
+                        </Link>
                     </div>
 
                     {/* Desktop Navigation */}
