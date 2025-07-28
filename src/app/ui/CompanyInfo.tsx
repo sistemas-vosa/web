@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Image from "next/image"
-import { Calendar, Shield, Award, ArrowRight } from "lucide-react"
+import { Calendar, Shield, Award } from "lucide-react"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -156,7 +156,7 @@ export default function CompanyInfo() {
             {/* BLOQUE 3 - Servicios */}
             <div ref={el => { blocksRef.current[2] = el }} className="flex flex-col lg:flex-row items-center gap-12">                <div className="lg:w-1/2">
                     <Image
-                        src="/img/company/company-services.jpg"
+                        src="/img/company/company-services.jpeg"
                         alt="Servicios premium de Vosa"
                         width={600}
                         height={400}
@@ -175,7 +175,7 @@ export default function CompanyInfo() {
                     </h3>
                     <p className="text-lg text-gray-600 leading-relaxed">
                         Desde nuestro exclusivo servicio Suite hasta opciones más accesibles como Semi-Cama, diseñamos cada
-                        experiencia pensando en tu comodidad. Con conexión a más de 200 destinos nacionales.
+                        experiencia pensando en tu comodidad. Con conexión a más de 30 destinos nacionales.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-4 text-center">

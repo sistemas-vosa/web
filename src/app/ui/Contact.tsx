@@ -51,8 +51,8 @@ export default function Contact() {
         },
         {
             icon: <MapPin size={24} />,
-            title: "Terminal Central",
-            info: "Av. Ramos Mejía 1302",
+            title: "Terminal Retiro",
+            info: "Boletería 57",
             description: "Retiro, Buenos Aires",
             color: "from-purple-500 to-purple-600",
         },

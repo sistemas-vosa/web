@@ -21,7 +21,7 @@ interface StatItem {
 const stats: StatItem[] = [
     {
         icon: <MapPin size={32} />,
-        number: 200,
+        number: 30,
         suffix: "+",
         label: "Destinos",
         description: "En todo el país",

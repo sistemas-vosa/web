@@ -19,7 +19,7 @@ const features = [
     {
         icon: <Route size={32} />,
         title: "Cobertura nacional",
-        description: "Más de 200 destinos conectados en todo el país con frecuencias diarias.",
+        description: "Más de 30 destinos conectados en todo el país con frecuencias diarias.",
         color: "from-green-500 to-green-600",
         bgColor: "bg-green-50",
         iconColor: "text-green-600",
