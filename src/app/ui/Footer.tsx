@@ -37,6 +37,7 @@ export default function Footer() {
                             Más de 25 años conectando Argentina con seguridad, confort y puntualidad. Tu viaje perfecto comienza con
                             nosotros.
                         </p>
+                        {/* Social media
                         <div className="flex space-x-4">
                             <a
                                 href="#"
@@ -67,6 +68,7 @@ export default function Footer() {
                                 <Youtube size={20} />
                             </a>
                         </div>
+                        */}
                     </div>
 
                     {/* Quick Links */}
@@ -124,7 +126,7 @@ export default function Footer() {
                             <div className="flex items-start gap-3">
                                 <MapPin className="text-orange-500 mt-1" size={18} />
                                 <div>
-                                    <p className="font-medium">Av. Ramos Mejía 1302</p>
+                                    <p className="font-medium">Boletería 57</p>
                                     <p className="text-gray-400 text-sm">Retiro, Buenos Aires</p>
                                 </div>
                             </div>
@@ -148,7 +150,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Bottom Footer */}
+            {/* Bottom Footer
             <div className="border-t border-gray-800">
                 <div className="max-w-7xl mx-auto px-4 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -167,6 +169,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+            */}
         </footer>
     )
 }

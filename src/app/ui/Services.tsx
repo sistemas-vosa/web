@@ -83,7 +83,7 @@ const services = [
             { icon: <Wifi size={20} />, label: "WiFi básico" },
             { icon: <Tv size={20} />, label: "TV y música" },
         ],
-        routes: "Red nacional - Más de 200 destinos",
+        routes: "Red nacional - Más de 30 destinos",
         color: "from-green-600 to-emerald-600",
         bgColor: "bg-green-50",
     },

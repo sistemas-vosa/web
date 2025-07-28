@@ -94,7 +94,7 @@ export default function Hero() {
                         {/* Detalles de Hero a la derecha en desktop, abajo en mobile */}
                         <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left space-y-6 md:space-y-8">
                             <h1 ref={titleRef} className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                                Tu viaje perfecto
+                                Tu viaje
                                 <span className="block text-orange-400">comienza aquí</span>
                             </h1>
                             <p
@@ -106,7 +106,7 @@ export default function Hero() {
                             <div ref={featuresRef} className="flex flex-wrap justify-center md:justify-start gap-4 text-sm md:text-base">
                                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
                                     <Star className="text-orange-400" size={18} />
-                                    <span>+200 destinos</span>
+                                    <span>+30 destinos</span>
                                 </div>
                                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
                                     <Shield className="text-orange-400" size={18} />
