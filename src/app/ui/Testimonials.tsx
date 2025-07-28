@@ -253,7 +253,13 @@ export default function Testimonials() {
                         <p className="mb-6 text-orange-100">
                             Viví tu propia experiencia Vosa y descubrí por qué somos la elección preferida de miles de pasajeros
                         </p>
-                        <button className="bg-white text-orange-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+                        <button
+                            onClick={() => {
+                                const hero = document.getElementById("hero");
+                                if (hero) hero.scrollIntoView({ behavior: "smooth" });
+                            }}
+                            className="bg-white text-orange-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+                        >
                             Reservar mi viaje
                         </button>
                     </div>

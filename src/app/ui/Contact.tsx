@@ -39,7 +39,7 @@ export default function Contact() {
             icon: <Phone size={24} />,
             title: "Teléfono",
             info: "0800-333-8672",
-            description: "Línea gratuita 24 horas",
+            description: "Línea gratuita",
             color: "from-green-500 to-green-600",
         },
         {
@@ -74,7 +74,7 @@ export default function Contact() {
                         Estamos aquí para <span className="text-orange-600">ayudarte</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        ¿Tenés alguna consulta? Nuestro equipo está disponible las 24 horas para brindarte la mejor atención
+                        ¿Tenés alguna consulta? Nuestro equipo está disponible para brindarte la mejor atención
                     </p>
                 </div>
 

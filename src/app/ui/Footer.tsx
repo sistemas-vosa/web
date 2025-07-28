@@ -15,11 +15,10 @@ export default function Footer() {
     ]
 
     const services = [
-        { name: "Servicio Suite", href: "#" },
-        { name: "Servicio Cama", href: "#" },
-        { name: "Servicio Semi-Cama", href: "#" },
-        { name: "Encomiendas", href: "#" },
-        { name: "Carga", href: "#" },
+        { name: "Servicio Suite", href: "#servicios" },
+        { name: "Servicio Cama", href: "#servicios" },
+        { name: "Servicio Semi-Cama", href: "#servicios" },
+        { name: "Encomiendas", href: "#encomiendas" },
     ]
 
     const destinations = ["Buenos Aires", "Tucumán", "Salta", "Santiago del Estero", "La Banda", "Resistencia"]

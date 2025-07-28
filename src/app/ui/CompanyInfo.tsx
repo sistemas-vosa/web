@@ -191,10 +191,12 @@ export default function CompanyInfo() {
                             <div className="text-sm text-gray-600">Accesible</div>
                         </div>
                     </div>
+                    {/*
                     <button className="flex items-center gap-2 bg-orange-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-700 transition-colors">
                         Conocer servicios
                         <ArrowRight size={20} />
                     </button>
+                    */}
                 </div>
             </div>
         </section>

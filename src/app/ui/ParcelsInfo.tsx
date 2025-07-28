@@ -15,6 +15,7 @@ import {
     FileText,
     ArrowRight,
     CheckCircle,
+    Headset,
 } from "lucide-react"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -26,9 +27,9 @@ const features = [
         description: "Servicio puerta a puerta en principales ciudades",
     },
     {
-        icon: <CreditCard size={24} />,
-        title: "Pago en destino",
-        description: "Flexibilidad de pago al recibir tu encomienda",
+        icon: <Clock size={24} />,
+        title: "Tiempos de entrega",
+        description: "Envíos rápidos: 24 a 72hs según destino",
     },
     {
         icon: <Shield size={24} />,
@@ -36,9 +37,9 @@ const features = [
         description: "Protección extra para cargas de alto valor",
     },
     {
-        icon: <FileText size={24} />,
-        title: "Cuentas corporativas",
-        description: "Soluciones especiales para empresas",
+        icon: <Headset size={24} />,
+        title: "Contacto encomiendas",
+        description: "0800-333-8672 | info@vosa.com.ar",
     },
 ]
 
@@ -177,7 +178,7 @@ export default function ParcelsInfo() {
                             ))}
                         </div>
 
-                        {/* CTA Buttons */}
+                        {/* CTA Buttons
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl flex items-center gap-2">
                                 Enviar encomienda
@@ -187,10 +188,11 @@ export default function ParcelsInfo() {
                                 Rastrear envío
                             </button>
                         </div>
+                        */}
                     </div>
                 </div>
 
-                {/* Process Steps */}
+                {/* Process Steps
                 <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
                     <h3 className="text-3xl font-bold text-center text-gray-800 mb-12">¿Cómo enviar tu encomienda?</h3>
 
@@ -203,7 +205,6 @@ export default function ParcelsInfo() {
                                 }}
                                 className="text-center group"
                             >
-                                {/* Step Number */}
                                 <div className="relative mb-6">
                                     <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                                         {step.number}
@@ -211,19 +212,18 @@ export default function ParcelsInfo() {
                                     <div className="bg-blue-100 rounded-full p-3 w-fit mx-auto text-blue-600 group-hover:bg-blue-200 transition-colors">
                                         {step.icon}
                                     </div>
-                                    {/* Connector line */}
                                     {index < steps.length - 1 && (
                                         <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gray-200 -translate-y-1/2"></div>
                                     )}
                                 </div>
 
-                                {/* Content */}
                                 <h4 className="font-bold text-gray-800 mb-2">{step.title}</h4>
                                 <p className="text-gray-600 text-sm">{step.description}</p>
                             </div>
                         ))}
                     </div>
                 </div>
+                */}
 
                 {/* Pricing and Info */}
                 <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -231,23 +231,23 @@ export default function ParcelsInfo() {
                     <div className="bg-white rounded-2xl p-6 shadow-lg">
                         <h4 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
                             <Package className="text-blue-600" size={20} />
-                            Tarifas
+                            Información de envío
                         </h4>
                         <div className="space-y-3">
                             <div className="flex justify-between">
-                                <span className="text-gray-600">Hasta 5kg</span>
-                                <span className="font-semibold">$2.500</span>
+                                <span className="text-gray-600">Peso máximo recomendado</span>
+                                <span className="font-semibold">30kg por bulto</span>
                             </div>
                             <div className="flex justify-between">
-                                <span className="text-gray-600">5kg - 15kg</span>
-                                <span className="font-semibold">$4.200</span>
+                                <span className="text-gray-600">Dimensiones</span>
+                                <span className="font-semibold">Consultar según destino</span>
                             </div>
                             <div className="flex justify-between">
-                                <span className="text-gray-600">15kg - 30kg</span>
-                                <span className="font-semibold">$6.800</span>
+                                <span className="text-gray-600">Cobertura</span>
+                                <span className="font-semibold">Nacional</span>
                             </div>
                         </div>
-                        <p className="text-xs text-gray-500 mt-4">*Precios orientativos. Consultá por destinos específicos.</p>
+                        <p className="text-xs text-gray-500 mt-4">Para cotizaciones y más detalles, contactanos.</p>
                     </div>
 
                     {/* Delivery Times */}
@@ -281,8 +281,8 @@ export default function ParcelsInfo() {
                         <p className="mb-4 text-blue-100">Nuestro equipo está disponible para asesorarte</p>
                         <div className="space-y-2 text-sm">
                             <p>📞 0800-333-8672</p>
-                            <p>📧 encomiendas@vosa.com.ar</p>
-                            <p>🕒 Atención 24hs</p>
+                            <p>📧 info@vosa.com.ar</p>
+                            <p>🕒 Atención personalizada</p>
                         </div>
                     </div>
                 </div>
