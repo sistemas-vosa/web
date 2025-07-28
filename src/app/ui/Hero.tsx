@@ -121,13 +121,15 @@ export default function Hero() {
                                         <span className="text-red-700 font-semibold text-lg">No se pudo cargar el buscador. Intente más tarde.</span>
                                     </div>
                                 )}
-                                <iframe
-                                    src="https://ecommerce.centraldepasajes.com.ar/agenciaframe.aspx?Token=C22TQeAa5%2BQ%2BOA6kFwavSXDleWuYm6XQjH9s3%2F3J%2BNI%3D&age=vos"
-                                    style={{ border: 'none', width: '100%', maxWidth: 350, height: 494, overflow: 'hidden', borderRadius: 12, background: '#fff', display: iframeLoaded && !iframeError ? 'block' : 'none', margin: '0 auto' }}
-                                    title="Buscador de pasajes"
-                                    onLoad={() => setIframeLoaded(true)}
-                                    onError={() => setIframeError(true)}
-                                />
+                                <div className="bg-white rounded-xl shadow-lg p-3 w-full flex justify-center items-center" style={{maxWidth: 360}}>
+                                    <iframe
+                                        src="https://ecommerce.centraldepasajes.com.ar/agenciaframe.aspx?Token=C22TQeAa5%2BQ%2BOA6kFwavSXDleWuYm6XQjH9s3%2F3J%2BNI%3D&age=vos"
+                                        style={{ border: 'none', width: '100%', maxWidth: 340, height: 494, overflow: 'hidden', borderRadius: 12, background: '#fff', display: iframeLoaded && !iframeError ? 'block' : 'none', margin: '0 auto' }}
+                                        title="Buscador de pasajes"
+                                        onLoad={() => setIframeLoaded(true)}
+                                        onError={() => setIframeError(true)}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
