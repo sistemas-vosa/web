@@ -18,6 +18,7 @@ export default function Hero() {
     const featuresRef = useRef<HTMLDivElement>(null)
     const [iframeLoaded, setIframeLoaded] = useState(false)
     const [iframeError, setIframeError] = useState(false)
+    const [showIframe, setShowIframe] = useState(false)
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -63,6 +64,15 @@ export default function Hero() {
 
         return () => ctx.revert()
     }, [])
+
+    useEffect(() => {
+        if (iframeLoaded && !iframeError) {
+            const timeout = setTimeout(() => {
+                setShowIframe(true)
+            }, 2000)
+            return () => clearTimeout(timeout)
+        }
+    }, [iframeLoaded, iframeError])
 
     return (
         <section
@@ -113,23 +123,25 @@ export default function Hero() {
                             className="w-full md:w-[370px] flex-shrink-0 flex flex-col items-center"
                         >
                             <div className="relative w-full flex justify-center items-center" style={{ minHeight: 494 }}>
-                                {!iframeLoaded && !iframeError && (
-                                    <div style={{ minHeight: 494 }} />
-                                )}
-                                {iframeError && (
-                                    <div className="absolute inset-0 flex items-center justify-center bg-red-100 rounded-2xl shadow-2xl z-10">
-                                        <span className="text-red-700 font-semibold text-lg">No se pudo cargar el buscador. Intente más tarde.</span>
+                                {!showIframe && !iframeError && (
+                                    <div className="absolute inset-0 flex justify-center items-center" style={{ minHeight: 494, zIndex: 20 }}>
+                                        <svg className="animate-spin h-8 w-8 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                                        </svg>
                                     </div>
                                 )}
-                                <div className="bg-white rounded-xl shadow-lg p-3 w-full flex justify-center items-center" style={{maxWidth: 360}}>
-                                    <iframe
-                                        src="https://ecommerce.centraldepasajes.com.ar/agenciaframe.aspx?Token=C22TQeAa5%2BQ%2BOA6kFwavSXDleWuYm6XQjH9s3%2F3J%2BNI%3D&age=vos"
-                                        style={{ border: 'none', width: '100%', maxWidth: 340, height: 494, overflow: 'hidden', borderRadius: 12, background: '#fff', display: iframeLoaded && !iframeError ? 'block' : 'none', margin: '0 auto' }}
-                                        title="Buscador de pasajes"
-                                        onLoad={() => setIframeLoaded(true)}
-                                        onError={() => setIframeError(true)}
-                                    />
-                                </div>
+                                {iframeError ? null : (
+                                    <div className="bg-white rounded-xl shadow-lg p-3 w-full flex justify-center items-center" style={{maxWidth: 360, position: 'relative', opacity: showIframe ? 1 : 0, transition: 'opacity 0.7s ease'}}>
+                                        <iframe
+                                            src="https://ecommerce.centraldepasajes.com.ar/agenciaframe.aspx?Token=C22TQeAa5%2BQ%2BOA6kFwavSXDleWuYm6XQjH9s3%2F3J%2BNI%3D&age=vos"
+                                            style={{ border: 'none', width: '100%', maxWidth: 340, height: 494, overflow: 'hidden', borderRadius: 12, background: '#fff', margin: '0 auto', display: showIframe ? 'block' : 'none' }}
+                                            title="Buscador de pasajes"
+                                            onLoad={() => setIframeLoaded(true)}
+                                            onError={(e) => { setIframeError(true); console.log('Error al cargar el iframe:', e); }}
+                                        />
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
