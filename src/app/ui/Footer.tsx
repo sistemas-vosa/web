@@ -168,6 +168,11 @@ export default function Footer() {
                             </a>
                         </div>
                          */}
+                        <div className="flex gap-6 text-sm">
+                            <a href="https://ecommerce.centraldepasajes.com.ar/login.aspx?agencia=C22TQeAa5%2bQ%2bOA6kFwavSXDleWuYm6XQjH9s3%2f3J%2bNI%3d&page=devol" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors">
+                                Cancelar una compra
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
