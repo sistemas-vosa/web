@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "@/app/ui/Header";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/next";
-import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,20 +29,14 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XLVTSS1N42"></script>
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XLVTSS1N42');
+        ` }} />
       </Head>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-XLVTSS1N42"
-        strategy="afterInteractive"
-        async
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-XLVTSS1N42');
-          `}
-      </Script>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
