@@ -36,6 +36,8 @@ export default function RootLayout({
           gtag('js', new Date());
           gtag('config', 'G-XLVTSS1N42');
         ` }} />
+
+          <meta name="google-site-verification" content="thCa2fciTLe9Mx8wENJKQH5MbJiQc51PDqFUzI4WXks" />
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
