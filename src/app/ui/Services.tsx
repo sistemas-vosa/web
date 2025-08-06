@@ -9,7 +9,7 @@ import { Star, Wifi, Coffee, Tv, Bed, ArrowRight, Check } from "lucide-react"
 gsap.registerPlugin(ScrollTrigger)
 
 const services = [
-    {
+    /*{
         id: "suite",
         title: "Servicio Suite",
         subtitle: "La experiencia de lujo definitiva",
@@ -34,28 +34,27 @@ const services = [
         routes: "Buenos Aires ↔ Santiago del Estero ↔ Tucumán",
         color: "from-purple-600 to-indigo-600",
         bgColor: "bg-purple-50",
-    },
+    },*/
     {
         id: "cama",
         title: "Servicio Cama",
         subtitle: "Confort y calidad en cada kilómetro",
         description:
-            "Butacas reclinables hasta 160°, comidas calientes a bordo, bebidas incluidas, climatización personalizada, mantas suaves y almohadas cómodas. Conectamos Buenos Aires con las principales ciudades del norte.",
+            "Butacas reclinables hasta 160°, aire acondicionado, luz de lectura individual y sistema de entretenimiento con música y TV. Conectamos Buenos Aires con las principales ciudades del norte.",
         image: "/img/services/service-cama.png",
         rating: 4.7,
         features: [
             "Butacas reclinables 160°",
-            "Comidas calientes incluidas",
-            "Bebidas sin cargo",
-            "Climatización individual",
-            "Mantas y almohadas",
+            "Aire acondicionado",
+            "Luz de lectura",
+            "TV y música",
             "Múltiples destinos",
         ],
         amenities: [
             { icon: <Bed size={20} />, label: "Reclinable 160°" },
-            { icon: <Coffee size={20} />, label: "Comidas incluidas" },
-            { icon: <Wifi size={20} />, label: "WiFi disponible" },
+            { icon: <Star size={20} />, label: "Luz de lectura" },
             { icon: <Tv size={20} />, label: "TV y música" },
+            { icon: <Check size={20} />, label: "Aire acondicionado" },
         ],
         routes: "Buenos Aires ↔ La Banda ↔ Tucumán ↔ Salta ↔ Santiago del Estero",
         color: "from-blue-600 to-cyan-600",
