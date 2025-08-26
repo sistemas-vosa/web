@@ -52,7 +52,7 @@ export default function Header() {
                           className="bg-white text-orange-600 font-semibold px-3 py-1 rounded shadow hover:bg-orange-100 transition inline-flex items-center gap-2"
                         >
                           <Package size={18} />
-                          Seguí tu encomiendas
+                          Seguí tu encomienda
                         </a>
                     </div>
                 </div>

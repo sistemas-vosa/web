@@ -143,7 +143,7 @@ export default function ParcelsInfo() {
                         <span className="text-white">
                             <Package size={20} />
                         </span>
-                        Seguí tu encomiendas
+                        Seguí tu encomienda
                     </a>
                 </div>
 
