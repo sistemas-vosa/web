@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { Phone, Menu, X, Clock, Mail } from "lucide-react"
+import { Phone, Menu, X, Clock, Mail, Package } from "lucide-react"
 import Link from "next/link";
 
 export default function Header() {
@@ -40,9 +40,20 @@ export default function Header() {
                             <span>info@vosa.com.ar</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <Clock size={14} />
-                        <span>Atención personalizada</span>
+                    <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-2">
+                            <Clock size={14} />
+                            <span>Atención personalizada</span>
+                        </div>
+                        <a
+                          href="http://mercury.sisorgcloud.com/tracking/P6ndO5ThH54AI6tYq1JcwOxlbAGiXtWsG40PVhkm***tn9QQbyJCOgNu1GTDm0***43HzO2+AVoupOMwltIFJ18LlTKeMaAdYsQxjcWoD1drZuCkU1m2VbzaCUWpAXVBsDgs+rxLpHV5OBc0i6+n66UfqpqgzWI59LZJV4YnS0LJCXKzxjF5rElod0UfTaQlE0uX"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-white text-orange-600 font-semibold px-3 py-1 rounded shadow hover:bg-orange-100 transition inline-flex items-center gap-2"
+                        >
+                          <Package size={18} />
+                          Seguí tu encomienda
+                        </a>
                     </div>
                 </div>
             </div>

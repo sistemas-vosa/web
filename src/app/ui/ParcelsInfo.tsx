@@ -133,6 +133,18 @@ export default function ParcelsInfo() {
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         Enviá tus paquetes con la confianza y seguridad que nos caracteriza. Red nacional conectada las 24 horas.
                     </p>
+                    <a
+                        href="http://mercury.sisorgcloud.com/tracking/P6ndO5ThH54AI6tYq1JcwOxlbAGiXtWsG40PVhkm***tn9QQbyJCOgNu1GTDm0***43HzO2+AVoupOMwltIFJ18LlTKeMaAdYsQxjcWoD1drZuCkU1m2VbzaCUWpAXVBsDgs+rxLpHV5OBc0i6+n66UfqpqgzWI59LZJV4YnS0LJCXKzxjF5rElod0UfTaQlE0uX"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 mt-6 bg-orange-600 text-white font-semibold px-6 py-2 rounded shadow hover:bg-orange-700 transition"
+                    >
+                        {/* Icono de paquete */}
+                        <span className="text-white">
+                            <Package size={20} />
+                        </span>
+                        Seguí tu encomienda
+                    </a>
                 </div>
 
                 {/* Main Content */}
