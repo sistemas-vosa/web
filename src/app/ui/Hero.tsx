@@ -19,6 +19,9 @@ export default function Hero() {
     const [iframeLoaded, setIframeLoaded] = useState(false)
     const [iframeError, setIframeError] = useState(false)
     const [showIframe, setShowIframe] = useState(false)
+    const [iframeSrc, setIframeSrc] = useState(
+        "https://ecommerce.centraldepasajes.com.ar/agenciaframe.aspx?Token=C22TQeAa5%2BQ%2BOA6kFwavSXDleWuYm6XQjH9s3%2F3J%2BNI%3D&age=vos",  
+    )
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -63,6 +66,17 @@ export default function Hero() {
         }, sectionRef)
 
         return () => ctx.revert()
+    }, [])
+
+    useEffect(() => {
+        if (
+            typeof window !== "undefined" &&
+            (window.location.hostname.endsWith("vosa.com.ar") || window.location.hostname === "localhost")
+        ) {
+            setIframeSrc(
+                "https://reservadirecta.sittnet.net/Commerce/vosa/ServicioButacaOmnibus/ServicioButacasOmnibusBusquedaEmbed",
+            )
+        }
     }, [])
 
     useEffect(() => {
@@ -134,7 +148,7 @@ export default function Hero() {
                                 {iframeError ? null : (
                                     <div className="bg-white rounded-xl shadow-lg p-3 w-full flex justify-center items-center" style={{maxWidth: 360, position: 'relative', opacity: showIframe ? 1 : 0, transition: 'opacity 0.7s ease'}}>
                                         <iframe
-                                            src="https://ecommerce.centraldepasajes.com.ar/agenciaframe.aspx?Token=C22TQeAa5%2BQ%2BOA6kFwavSXDleWuYm6XQjH9s3%2F3J%2BNI%3D&age=vos"
+                                            src={iframeSrc}
                                             style={{ border: 'none', width: '100%', maxWidth: 340, height: 494, overflow: 'hidden', borderRadius: 12, background: '#fff', margin: '0 auto', display: showIframe ? 'block' : 'none' }}
                                             title="Buscador de pasajes"
                                             onLoad={() => setIframeLoaded(true)}
