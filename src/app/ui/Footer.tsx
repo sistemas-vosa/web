@@ -1,6 +1,6 @@
 "use client"
 
-import { Phone, Mail, MapPin } from "lucide-react"
+import { Phone, Mail, MapPin, Instagram } from "lucide-react"
 import Image from "next/image"
 
 export default function Footer() {
@@ -37,38 +37,44 @@ export default function Footer() {
                             Más de 25 años conectando Argentina con seguridad, confort y puntualidad. Tu viaje perfecto comienza con
                             nosotros.
                         </p>
-                        {/* Social media
-                        <div className="flex space-x-4">
-                            <a
-                                href="#"
-                                className="bg-gray-800 hover:bg-orange-600 p-2 rounded-full transition-colors"
-                                aria-label="Facebook"
-                            >
-                                <Facebook size={20} />
-                            </a>
-                            <a
-                                href="#"
-                                className="bg-gray-800 hover:bg-orange-600 p-2 rounded-full transition-colors"
-                                aria-label="Instagram"
-                            >
-                                <Instagram size={20} />
-                            </a>
-                            <a
-                                href="#"
-                                className="bg-gray-800 hover:bg-orange-600 p-2 rounded-full transition-colors"
-                                aria-label="Twitter"
-                            >
-                                <Twitter size={20} />
-                            </a>
-                            <a
-                                href="#"
-                                className="bg-gray-800 hover:bg-orange-600 p-2 rounded-full transition-colors"
-                                aria-label="YouTube"
-                            >
-                                <Youtube size={20} />
-                            </a>
+                        {/* Redes Sociales */}
+                        <div>
+                            <h3 className="text-lg font-semibold mb-4">Seguinos en nuestras redes</h3>
+                            <div className="flex space-x-4">
+                                <a
+                                    href="https://www.instagram.com/vosaok/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-gray-800 hover:bg-orange-600 p-2 rounded-full transition-colors"
+                                    aria-label="Instagram"
+                                >
+                                    <Instagram size={20} />
+                                </a>
+                                {/* Otras redes preparadas para a futuro:
+                                <a
+                                    href="#"
+                                    className="bg-gray-800 hover:bg-orange-600 p-2 rounded-full transition-colors"
+                                    aria-label="Facebook"
+                                >
+                                    <Facebook size={20} />
+                                </a>
+                                <a
+                                    href="#"
+                                    className="bg-gray-800 hover:bg-orange-600 p-2 rounded-full transition-colors"
+                                    aria-label="Twitter"
+                                >
+                                    <Twitter size={20} />
+                                </a>
+                                <a
+                                    href="#"
+                                    className="bg-gray-800 hover:bg-orange-600 p-2 rounded-full transition-colors"
+                                    aria-label="YouTube"
+                                >
+                                    <Youtube size={20} />
+                                </a>
+                                */}
+                            </div>
                         </div>
-                        */}
                     </div>
 
                     {/* Quick Links */}
