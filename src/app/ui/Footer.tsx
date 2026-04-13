@@ -1,6 +1,6 @@
 "use client"
 
-import { Phone, Mail, MapPin, Instagram } from "lucide-react"
+import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react"
 import Image from "next/image"
 
 export default function Footer() {
@@ -50,14 +50,17 @@ export default function Footer() {
                                 >
                                     <Instagram size={20} />
                                 </a>
-                                {/* Otras redes preparadas para a futuro:
+
                                 <a
-                                    href="#"
+                                    href="https://www.facebook.com/share/14ajy9vh8DC/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="bg-gray-800 hover:bg-orange-600 p-2 rounded-full transition-colors"
                                     aria-label="Facebook"
                                 >
                                     <Facebook size={20} />
                                 </a>
+                                {/* Otras redes preparadas para a futuro:
                                 <a
                                     href="#"
                                     className="bg-gray-800 hover:bg-orange-600 p-2 rounded-full transition-colors"
@@ -149,8 +152,8 @@ export default function Footer() {
                                 key={index}
                                 className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm hover:bg-orange-600 hover:text-white transition-colors cursor-pointer"
                             >
-                {destination}
-              </span>
+                                {destination}
+                            </span>
                         ))}
                     </div>
                 </div>
